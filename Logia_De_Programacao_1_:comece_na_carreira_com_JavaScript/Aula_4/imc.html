@@ -1,0 +1,36 @@
+<script>
+
+var pulaLinha = function() {
+	document.write("<br>");
+}
+
+var mostra = function(frase) {
+	document.write(frase);
+	pulaLinha();
+}
+
+var calculaImc = function(altura, peso) { 
+	var imc = peso / (altura * altura);
+	return imc;
+}
+
+var peso = 99;
+var altura = 1.6;
+var imc = calculaImc(altura, peso);
+
+mostra("Meu IMC é " + imc);
+
+
+if (imc < 18.5) {
+	mostra("Seu IMC indica que você está ABAIXO do peso.");
+}
+
+if (imc > 35) { 
+	mostra("Seus IMC indica que você está ACIMA do peso.");
+}
+
+if (imc >= 18.5 && imc <= 35) {
+	mostra("OK! Seu IMC está entre os dois limites.");
+}
+
+</script>

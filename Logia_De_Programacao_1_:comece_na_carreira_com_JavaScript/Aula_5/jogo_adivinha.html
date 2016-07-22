@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+
+<script>
+	var numeroPensado = Math.round(Math.random() * 100);
+	
+	var numeroDeTentativa = 1;
+	while (numeroDeTentativa <= 3) {
+		var chute = prompt("Já pensei. Qual você acha que é? ");
+		if (chute == numeroPensado) {
+			alert("UAU! Você acertou, pois eu pensei no " + numeroPensado);
+			break;
+		} else if(chute > numeroPensado){
+			alert("Você errou! O número que você digitou é maior do que o número pensado. Será que ainda tem mais tentativas?");
+		} else {
+			alert("Você errou! O número que você digitou é menor do que o número pensado. Será que ainda tem mais tentativas?")
+		}
+		numeroDeTentativa++;
+	}
+</script>

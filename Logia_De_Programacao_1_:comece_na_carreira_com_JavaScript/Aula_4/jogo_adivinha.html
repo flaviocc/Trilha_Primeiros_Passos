@@ -1,0 +1,18 @@
+<script>
+	var pulaLinha = function() {
+		document.write("<br>");
+	}
+
+	var mostra = function(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+	var numeroPensado = Math.round(Math.random() * 100);
+	
+	var chute = prompt("Já pensei. Qual você acha que é? ");
+	if (chute == numeroPensado) {
+		mostra("UAU! Você acertou, pois eu pensei no " + numeroPensado);
+	} else {
+		mostra("Você errou! Eu tinha pensado no " + numeroPensado);
+	}
+</script>
